@@ -18,6 +18,7 @@ namespace ReproBug
 			_next = next;
 			
 			Console.WriteLine(_webHostEnvironment.WebRootPath);
+			Console.WriteLine(_webHostEnvironment.WebRootFileProvider.ToString() ?? "null");
 		}
 
 		public Task InvokeAsync(HttpContext httpContext)
